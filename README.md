@@ -55,4 +55,4 @@ yet. Everything will be created successfully, so running it again will result in
 5. Creates and populates "GRADEBOOK" — individual student scores
 6. Calculates weighted scores — "weighted_score = (assignment_weight / 100) * score"
 7. Queries final grades — SUM of weighted scores per student
-8. Demonstrates an UPDATE — adds a new grade category to a student and corrects Joe Smith's Project score and recalculates
+8. Demonstrates an UPDATE — adds a new grade category to a student and corrects Joe Smith's Project score and recalculates his weighted final grade
