@@ -70,7 +70,7 @@ DROP TABLE GRADEBOOK CASCADE CONSTRAINTS;
 CREATE TABLE GRADEBOOK (
     assignment_ID varchar(4) PRIMARY KEY NOT NULL,
     CRN varchar(4),
-    studentID varchar(16),
+    studentID varchar(6),
     last_name varchar(16),
     assignment_name varchar(16),
     assignment_weight dec (5,2),
