@@ -121,13 +121,13 @@ UPDATE GRADEBOOK SET weighted_score = (assignment_weight/100)*score;
 
 SELECT * FROM GRADEBOOK;
 
-SELECT SUM(weighted_score) FROM GRADEBOOK WHERE studentID = 'JSMI01';
-SELECT SUM(weighted_score) FROM GRADEBOOK WHERE studentID = 'MJON04';
-SELECT SUM(weighted_score) FROM GRADEBOOK WHERE studentID = 'OWIL05';
-SELECT SUM(weighted_score) FROM GRADEBOOK WHERE studentID = 'BJOH02';
-SELECT SUM(weighted_score) FROM GRADEBOOK WHERE studentID = 'DROB06';
-SELECT SUM(weighted_score) FROM GRADEBOOK WHERE studentID = 'JBRO03';
-SELECT SUM(weighted_score) FROM GRADEBOOK WHERE studentID = 'TMIL07';
+SELECT SUM(weighted_score) FROM GRADEBOOK WHERE studentID = 'JSMI01' and crn='1111';
+SELECT SUM(weighted_score) FROM GRADEBOOK WHERE studentID = 'MJON04' and crn='1111';
+SELECT SUM(weighted_score) FROM GRADEBOOK WHERE studentID = 'OWIL05' and crn='1111';
+SELECT SUM(weighted_score) FROM GRADEBOOK WHERE studentID = 'BJOH02' and crn='2222';
+SELECT SUM(weighted_score) FROM GRADEBOOK WHERE studentID = 'DROB06' and crn='2222';
+SELECT SUM(weighted_score) FROM GRADEBOOK WHERE studentID = 'JBRO03' and crn='3333';
+SELECT SUM(weighted_score) FROM GRADEBOOK WHERE studentID = 'TMIL07' and crn='3333';
 
 
 --create empty row for potential extra credit
