@@ -129,9 +129,20 @@ SELECT SUM(weighted_score) FROM GRADEBOOK WHERE studentID = 'DROB06';
 SELECT SUM(weighted_score) FROM GRADEBOOK WHERE studentID = 'JBRO03';
 SELECT SUM(weighted_score) FROM GRADEBOOK WHERE studentID = 'TMIL07';
 
+
+--create empty row for potential extra credit
+INSERT INTO GRADEBOOK VALUES ('A031', '1111', 'JSMI01', 'Smith', 'Extra Credit', 100.00, 0.00, 0.00);
+--read
 SELECT * FROM GRADEBOOK where studentID = 'JSMI01';
 SELECT SUM(weighted_score) FROM GRADEBOOK WHERE studentID = 'JSMI01';
+--update
 UPDATE GRADEBOOK SET score = 63.00 WHERE studentID = 'JSMI01' and assignment_name = 'Project';
+UPDATE GRADEBOOK SET weighted_score = (assignment_weight/100)*score;
+--read
+SELECT * FROM GRADEBOOK where studentID = 'JSMI01';
+SELECT SUM(weighted_score) FROM GRADEBOOK WHERE studentID = 'JSMI01';
+--apply extra credit to boost his grade!
+UPDATE GRADEBOOK SET score = 4.00 WHERE studentID = 'JSMI01' and assignment_name = 'Extra Credit';
 UPDATE GRADEBOOK SET weighted_score = (assignment_weight/100)*score;
 SELECT * FROM GRADEBOOK where studentID = 'JSMI01';
 SELECT SUM(weighted_score) FROM GRADEBOOK WHERE studentID = 'JSMI01';
