@@ -130,7 +130,7 @@ SELECT SUM(weighted_score) FROM GRADEBOOK WHERE studentID = 'JBRO03' and crn='33
 SELECT SUM(weighted_score) FROM GRADEBOOK WHERE studentID = 'TMIL07' and crn='3333';
 
 
---create empty row for potential extra credit
+--create empty row for potential extra credit specificallly for joe, could be created for everyone, but just joe for now
 INSERT INTO GRADEBOOK VALUES ('A031', '1111', 'JSMI01', 'Smith', 'Extra Credit', 100.00, 0.00, 0.00);
 --read
 SELECT * FROM GRADEBOOK where studentID = 'JSMI01';
